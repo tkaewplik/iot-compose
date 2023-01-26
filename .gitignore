@@ -1,0 +1,6 @@
+.env
+chronograf-storage/*
+grafana-provisioning/*
+influxdb-storage/*
+nodered-storage/*
+grafana-storage/*
