@@ -1,4 +1,5 @@
 .env
+secrets/*
 chronograf-storage/*
 grafana-provisioning/*
 influxdb-storage/*
