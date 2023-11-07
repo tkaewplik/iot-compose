@@ -36,8 +36,11 @@ services:
   mosquitto:
     image: eclipse-mosquitto:2.0
     configs:
-      - source: consquitto-conf
+      - source: mosquitto-conf
         target: /mosquitto/config/mosquitto.conf
+      - source: mosquitto-pass
+        target: /mosquitto/password.txt
+        
     ports:
       - "1883:1883"
       - "9001:9001"
@@ -102,7 +105,9 @@ volumes:
   mosquitto-log:
 
 configs:
-  consquitto-conf:
+  mosquitto-conf:
     file: ./configs/mosquitto.conf
   influxdb-conf:
     file: ./configs/influxdb/config.yml
+  mosquitto-pass:
+    file: ./secrets/password.txt
